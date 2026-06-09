@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arkanjia — Pitch Investidores 2025</title>
+<title>Arkanjia — Pitch Investidores 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -282,6 +282,65 @@ footer p{font-size:12px;color:rgba(255,255,255,.26)}
   .invg{grid-template-columns:1fr}
   .panel.on{flex-direction:column}
 }
+
+/* ── HERO PHONE ── */
+#hero{align-items:center}
+.hero-phone-wrap{
+  flex:1;display:flex;justify-content:center;align-items:center;
+  padding-left:40px;flex-shrink:0;
+}
+.hero-phone{
+  width:240px;background:#13162A;border-radius:40px;
+  border:2px solid rgba(255,255,255,.12);
+  box-shadow:0 40px 80px rgba(0,0,0,.6),0 0 0 1px rgba(26,86,255,.15);
+  overflow:hidden;position:relative;
+}
+.hp-notch{width:80px;height:24px;background:#0D1020;border-radius:0 0 14px 14px;margin:0 auto}
+.hp-screen{padding:14px;min-height:460px;position:relative;overflow:hidden}
+.hp-slide{display:none;animation:fadeIn .4s ease}
+.hp-slide.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.hp-topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.hp-ttl{font-size:15px;font-weight:800;color:#fff}
+.hp-ico{width:28px;height:28px;border-radius:8px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.45)}
+.hp-grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}
+.hp-s2{background:#1A1E30;border-radius:10px;padding:12px}
+.hp-sl2{font-size:9px;color:rgba(255,255,255,.32);font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.hp-sv2{font-size:22px;font-weight:900;line-height:1;margin-top:3px}
+.hp-sv2.gc{background:linear-gradient(135deg,#1A56FF,#7A2CFF);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hp-sv2.cy{color:#00C7FF}
+.hp-sec{font-size:10px;font-weight:700;color:rgba(255,255,255,.38);text-transform:uppercase;letter-spacing:.07em;margin-bottom:8px}
+.hp-al{display:flex;align-items:flex-start;gap:8px;background:#1A1E30;border-radius:8px;padding:9px;margin-bottom:6px}
+.hp-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:2px}
+.hp-at{font-size:11px;font-weight:600;color:#fff}
+.hp-am{font-size:10px;color:rgba(255,255,255,.28);margin-top:1px}
+/* radar */
+.hp-srch{display:flex;align-items:center;gap:7px;background:#1A1E30;border:1px solid rgba(255,255,255,.08);border-radius:7px;padding:8px 10px;margin-bottom:10px;font-size:10px;color:rgba(255,255,255,.22)}
+.hp-erow{display:flex;align-items:center;gap:8px;background:#1A1E30;border:1px solid rgba(255,255,255,.05);border-radius:7px;padding:9px;margin-bottom:6px}
+.hp-sc{width:32px;height:32px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex-shrink:0}
+.hp-et{font-size:11px;font-weight:600;color:#fff;margin-bottom:1px}
+.hp-em{font-size:10px;color:rgba(255,255,255,.28)}
+/* kanban */
+.hp-kc{background:#1A1E30;border:1px solid rgba(255,255,255,.06);border-radius:8px;padding:10px;margin-bottom:7px}
+.hp-kt{font-size:11px;font-weight:600;color:#fff;margin-bottom:3px}
+.hp-km{font-size:10px;color:rgba(255,255,255,.28);margin-bottom:5px}
+.hp-tag{display:inline-block;padding:2px 7px;border-radius:4px;font-size:9px;font-weight:700}
+/* dots e bottom nav */
+.hp-dots{display:flex;justify-content:center;gap:6px;padding:8px 0 2px}
+.hp-dot-ind{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.2);cursor:pointer;transition:all .2s}
+.hp-dot-ind.active{width:18px;border-radius:3px;background:linear-gradient(90deg,#1A56FF,#7A2CFF)}
+.hp-bot2{display:flex;justify-content:space-around;padding:10px 0 8px;border-top:1px solid rgba(255,255,255,.06);background:#13162A}
+.hp-tab2{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:8px;color:rgba(255,255,255,.28);cursor:pointer}
+.hp-tab2.on{color:#00C7FF}
+
+/* ── TELAS — mais tabs e mais detalhes ── */
+.tabs{flex-wrap:wrap;gap:8px}
+
+@media(max-width:900px){
+  #hero{flex-direction:column!important}
+  .hero-phone-wrap{padding-left:0;padding-top:32px;width:100%}
+  .hcont{max-width:100%!important}
+}
 </style>
 </head>
 <body>
@@ -304,12 +363,12 @@ footer p{font-size:12px;color:rgba(255,255,255,.26)}
 </nav>
 
 <!-- HERO -->
-<section id="hero">
+<section id="hero" style="flex-direction:row;gap:0">
   <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
   <div class="hgrid"></div>
-  <div class="hcont">
+  <div class="hcont" style="max-width:520px;flex-shrink:0">
     <!-- Logo grande no hero: símbolo + wordmark separados -->
-    <div class="hbadge"><span class="bdot"></span>Pitch para Investidores · 2025</div>
+    <div class="hbadge"><span class="bdot"></span>Pitch para Investidores · 2026</div>
     <h1 class="hh1">O sistema que<br><span class="gt">fecha o ciclo</span><br>completo da<br>licitação.</h1>
     <p class="hsub">Do edital ao recebimento — com <strong>IA, SINAPI integrada e geração de documentos.</strong> Nenhum concorrente entrega isso. A Arkanjia faz.</p>
     <div class="hbtns">
@@ -321,6 +380,72 @@ footer p{font-size:12px;color:rgba(255,255,255,.26)}
       <div class="hs"><div class="hsn">420<span style="font-size:22px">mil</span></div><div class="hsl">Empresas fornecedoras no SICAF</div></div>
       <div class="hs"><div class="hsn">R$5k</div><div class="hsl">Custo médio gestor humano/mês</div></div>
       <div class="hs"><div class="hsn">&lt;3%</div><div class="hsl">Empresas com sistema dedicado</div></div>
+    </div>
+  </div>
+
+  <!-- PHONE HERO ANIMADO -->
+  <div class="hero-phone-wrap">
+    <div class="hero-phone">
+      <div class="hp-notch"></div>
+      <div class="hp-screen">
+        <!-- Slides das telas — JS faz rotação -->
+        <div class="hp-slide active" id="hps-0">
+          <div class="hp-topbar">
+            <div class="hp-ttl">Dashboard</div>
+            <div class="hp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
+          </div>
+          <div class="hp-grid2">
+            <div class="hp-s2"><div class="hp-sl2">Ativas</div><div class="hp-sv2 gc">18</div></div>
+            <div class="hp-s2"><div class="hp-sl2">MRR est.</div><div class="hp-sv2 cy">R$142k</div></div>
+          </div>
+          <div class="hp-sec">Alertas</div>
+          <div class="hp-al"><div class="hp-dot" style="background:#00E5C8"></div><div><div class="hp-at">94% match — Cuiabá</div><div class="hp-am">Pregão 041 · R$284k</div></div></div>
+          <div class="hp-al"><div class="hp-dot" style="background:#7A2CFF"></div><div><div class="hp-at">Disputa em 2h</div><div class="hp-am">Sorriso · Mat. elétricos</div></div></div>
+          <div class="hp-al"><div class="hp-dot" style="background:#16A34A"></div><div><div class="hp-at">ATA assinada</div><div class="hp-am">Tangará · 12 meses</div></div></div>
+        </div>
+        <div class="hp-slide" id="hps-1">
+          <div class="hp-topbar"><div class="hp-ttl">Radar</div><span style="font-size:10px;background:rgba(0,199,255,.15);color:#00C7FF;padding:2px 8px;border-radius:8px;font-weight:700">47 novos</span></div>
+          <div class="hp-srch"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="2" stroke-linecap="round" width="13" height="13"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><span>CATMAT, município...</span></div>
+          <div class="hp-erow"><div class="hp-sc" style="background:rgba(0,199,255,.12);color:#00C7FF">94</div><div style="flex:1"><div class="hp-et">Cuiabá · Pregão 041</div><div class="hp-em">R$284k · 3 dias</div></div></div>
+          <div class="hp-erow"><div class="hp-sc" style="background:rgba(0,199,255,.12);color:#00C7FF">87</div><div style="flex:1"><div class="hp-et">UFMT · Pregão 019</div><div class="hp-em">R$96k · 5 dias</div></div></div>
+          <div class="hp-erow"><div class="hp-sc" style="background:rgba(122,44,255,.12);color:#B47AFF">71</div><div style="flex:1"><div class="hp-et">Sinop · Pregão 028</div><div class="hp-em">R$142k · 7 dias</div></div></div>
+          <div class="hp-erow"><div class="hp-sc" style="background:rgba(122,44,255,.12);color:#B47AFF">65</div><div style="flex:1"><div class="hp-et">Rondonópolis · Pregão 009</div><div class="hp-em">R$378k · 8 dias</div></div></div>
+        </div>
+        <div class="hp-slide" id="hps-2">
+          <div class="hp-topbar"><div class="hp-ttl">Pipeline</div><span style="font-size:10px;background:rgba(26,86,255,.15);color:#7BAAFF;padding:2px 8px;border-radius:8px;font-weight:700">18 ativas</span></div>
+          <div class="hp-sec">Em disputa agora</div>
+          <div class="hp-kc" style="border-color:rgba(0,199,255,.4)"><div class="hp-kt">Sorriso — Mat. elétricos</div><div class="hp-km">Ao vivo · R$142k</div><div class="hp-tag" style="background:rgba(0,199,255,.15);color:#00C7FF">Ao vivo</div></div>
+          <div class="hp-sec">Ganhas</div>
+          <div class="hp-kc"><div class="hp-kt">Tangará da Serra — Tintas</div><div class="hp-km">ATA vigente · R$67k</div><div class="hp-tag" style="background:rgba(0,180,100,.15);color:#4ADE80">Execução</div></div>
+          <div class="hp-kc"><div class="hp-kt">UFMT — Mat. escritório</div><div class="hp-km">Empenho recebido</div><div class="hp-tag" style="background:rgba(0,180,100,.15);color:#4ADE80">Ativa</div></div>
+        </div>
+        <div class="hp-slide" id="hps-3">
+          <div class="hp-topbar"><div class="hp-ttl">Composição</div><button style="background:linear-gradient(135deg,#1A56FF,#7A2CFF);border:none;border-radius:5px;padding:4px 10px;font-size:10px;font-weight:700;color:#fff;cursor:pointer">Exportar</button></div>
+          <div style="background:rgba(26,86,255,.1);border:1px solid rgba(26,86,255,.25);border-radius:8px;padding:10px;margin-bottom:10px;text-align:center">
+            <div style="font-size:9px;color:rgba(255,255,255,.38);margin-bottom:3px;text-transform:uppercase;letter-spacing:.05em;font-weight:700">Total com BDI 24,5%</div>
+            <div style="font-size:22px;font-weight:900;color:#00C7FF;letter-spacing:-1px">R$49.680</div>
+            <div style="font-size:9px;color:rgba(255,255,255,.28)">SINAPI Jun/26 · 32 itens</div>
+          </div>
+          <div style="background:#1A1E30;border-radius:7px;overflow:hidden">
+            <div style="display:flex;justify-content:space-between;padding:7px 10px;border-bottom:1px solid rgba(255,255,255,.04)"><span style="font-size:10px;color:rgba(255,255,255,.6)">Cimento CP-II · 500un</span><span style="font-size:10px;font-weight:700;color:#00C7FF">R$16.200</span></div>
+            <div style="display:flex;justify-content:space-between;padding:7px 10px;border-bottom:1px solid rgba(255,255,255,.04)"><span style="font-size:10px;color:rgba(255,255,255,.6)">Areia lavada · 80m³</span><span style="font-size:10px;font-weight:700;color:#00C7FF">R$7.840</span></div>
+            <div style="display:flex;justify-content:space-between;padding:7px 10px"><span style="font-size:10px;color:rgba(255,255,255,.6)">Tijolo cerâmico · 12mil</span><span style="font-size:10px;font-weight:700;color:#00C7FF">R$7.440</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- dots indicador -->
+      <div class="hp-dots">
+        <span class="hp-dot-ind active" onclick="goSlide(0)"></span>
+        <span class="hp-dot-ind" onclick="goSlide(1)"></span>
+        <span class="hp-dot-ind" onclick="goSlide(2)"></span>
+        <span class="hp-dot-ind" onclick="goSlide(3)"></span>
+      </div>
+      <div class="hp-bot2">
+        <div class="hp-tab2 on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="18" height="18"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span>Home</span></div>
+        <div class="hp-tab2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="18" height="18"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><span>Radar</span></div>
+        <div class="hp-tab2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="18" height="18"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg><span>Pipeline</span></div>
+        <div class="hp-tab2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="18" height="18"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg><span>Preços</span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -363,9 +488,11 @@ footer p{font-size:12px;color:rgba(255,255,255,.26)}
   <h2 class="sh rev" style="color:#fff">Telas do sistema</h2>
   <p class="sdesc rev">Interface web e mobile para gestores e equipes operacionais.</p>
   <div class="tabs rev">
-    <button class="tab on" onclick="sw('kanban',this)">Pipeline de licitações</button>
+    <button class="tab on" onclick="sw('kanban',this)">Pipeline</button>
     <button class="tab" onclick="sw('radar',this)">Radar de editais</button>
-    <button class="tab" onclick="sw('comp',this)">Composição de preços</button>
+    <button class="tab" onclick="sw('comp',this)">Composição SINAPI</button>
+    <button class="tab" onclick="sw('concorrentes',this)">Análise de concorrentes</button>
+    <button class="tab" onclick="sw('ata',this)">Gestão pós-contrato</button>
   </div>
 
   <!-- KANBAN -->
@@ -481,8 +608,8 @@ footer p{font-size:12px;color:rgba(255,255,255,.26)}
           <div class="bni"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Concorrentes</div>
         </div>
         <div class="bmain">
-          <div class="chead"><h4>Composição — Pregão 041/2025</h4><button class="cbtn">Exportar proposta</button></div>
-          <div class="cmets"><div class="cmet"><div class="cml">BDI</div><div class="cmv cy">24,5%</div></div><div class="cmet"><div class="cml">Tabela</div><div class="cmv" style="font-size:13px">SINAPI Jun/25</div></div><div class="cmet"><div class="cml">Itens</div><div class="cmv">32</div></div></div>
+          <div class="chead"><h4>Composição — Pregão 041/2026</h4><button class="cbtn">Exportar proposta</button></div>
+          <div class="cmets"><div class="cmet"><div class="cml">BDI</div><div class="cmv cy">24,5%</div></div><div class="cmet"><div class="cml">Tabela</div><div class="cmv" style="font-size:13px">SINAPI Jun/26</div></div><div class="cmet"><div class="cml">Itens</div><div class="cmv">32</div></div></div>
           <div class="ctw"><table class="ctbl"><thead><tr><th>Código</th><th>Descrição</th><th>Qtd</th><th class="cv">Unit.</th><th class="cv">Total</th></tr></thead><tbody><tr><td>74209</td><td>Cimento CP-II-E 50kg</td><td>500</td><td class="cv">R$32,40</td><td class="cv">R$16.200</td></tr><tr><td>74117</td><td>Areia média lavada m³</td><td>80</td><td class="cv">R$98,00</td><td class="cv">R$7.840</td></tr><tr><td>74130</td><td>Tijolo cerâmico 9×14 (mil)</td><td>12</td><td class="cv">R$620</td><td class="cv">R$7.440</td></tr><tr><td>EXT-01</td><td>Mão de obra especializada</td><td>1</td><td class="cv">R$8.500</td><td class="cv">R$8.500</td></tr></tbody></table><div class="ctot"><span>Total com BDI 24,5%</span><span>R$49.680,90</span></div></div>
         </div>
       </div>
@@ -493,7 +620,7 @@ footer p{font-size:12px;color:rgba(255,255,255,.26)}
         <div class="phntch"></div>
         <div class="phsc">
           <div class="phtop"><div class="phttl">Composição</div><div class="phbell"><svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div></div>
-          <div style="background:rgba(26,86,255,.1);border:1px solid rgba(26,86,255,.25);border-radius:10px;padding:14px;margin-bottom:12px;text-align:center"><div style="font-size:9px;color:rgba(255,255,255,.38);margin-bottom:4px;font-weight:700;text-transform:uppercase;letter-spacing:.05em">Total com BDI 24,5%</div><div style="font-size:26px;font-weight:900;color:var(--cyan);letter-spacing:-1px">R$49.680</div><div style="font-size:10px;color:rgba(255,255,255,.28);margin-top:2px">SINAPI Jun/2025 · 32 itens</div></div>
+          <div style="background:rgba(26,86,255,.1);border:1px solid rgba(26,86,255,.25);border-radius:10px;padding:14px;margin-bottom:12px;text-align:center"><div style="font-size:9px;color:rgba(255,255,255,.38);margin-bottom:4px;font-weight:700;text-transform:uppercase;letter-spacing:.05em">Total com BDI 24,5%</div><div style="font-size:26px;font-weight:900;color:var(--cyan);letter-spacing:-1px">R$49.680</div><div style="font-size:10px;color:rgba(255,255,255,.28);margin-top:2px">SINAPI Jun/2026 · 32 itens</div></div>
           <div class="phst">Itens da proposta</div>
           <div style="background:#1A1E30;border-radius:8px;overflow:hidden"><div style="display:flex;justify-content:space-between;padding:9px 11px;border-bottom:1px solid rgba(255,255,255,.04)"><span style="font-size:10px;color:rgba(255,255,255,.6)">Cimento CP-II · 500un</span><span style="font-size:10px;font-weight:700;color:var(--cyan)">R$16.200</span></div><div style="display:flex;justify-content:space-between;padding:9px 11px;border-bottom:1px solid rgba(255,255,255,.04)"><span style="font-size:10px;color:rgba(255,255,255,.6)">Areia lavada · 80m³</span><span style="font-size:10px;font-weight:700;color:var(--cyan)">R$7.840</span></div><div style="display:flex;justify-content:space-between;padding:9px 11px;border-bottom:1px solid rgba(255,255,255,.04)"><span style="font-size:10px;color:rgba(255,255,255,.6)">Tijolo cerâmico · 12mil</span><span style="font-size:10px;font-weight:700;color:var(--cyan)">R$7.440</span></div><div style="display:flex;justify-content:space-between;padding:9px 11px"><span style="font-size:10px;color:rgba(255,255,255,.6)">Mão de obra esp.</span><span style="font-size:10px;font-weight:700;color:var(--cyan)">R$8.500</span></div></div>
           <div style="margin-top:12px;background:var(--grad);border-radius:8px;padding:11px;text-align:center;font-size:12px;font-weight:700;color:#fff;cursor:pointer">Exportar proposta →</div>
@@ -507,6 +634,192 @@ footer p{font-size:12px;color:rgba(255,255,255,.26)}
       </div>
     </div>
   </div>
+
+  <!-- CONCORRENTES -->
+  <div id="p-concorrentes" class="panel">
+    <div class="brow" style="max-width:900px;width:100%">
+      <div class="bbar"><div class="bd r"></div><div class="bd y"></div><div class="bd g"></div><div class="burl">app.arkanjia.com.br/concorrentes</div></div>
+      <div class="blay" style="grid-template-columns:190px 1fr;min-height:460px">
+        <div class="bsb">
+          <div class="bsb-top"><img src="https://raw.githubusercontent.com/ueligtoncordeiro-ux/arklicita/main/assets/symbol.png" alt="" style="height:22px;width:auto;object-fit:contain"><img src="https://raw.githubusercontent.com/ueligtoncordeiro-ux/arklicita/main/assets/wordmark.png" alt="Arkanjia" style="height:14px;width:auto;object-fit:contain"></div>
+          <div class="bni"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="15" height="15"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>Pipeline</div>
+          <div class="bni"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="15" height="15"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>Radar</div>
+          <div class="bni"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="15" height="15"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Composição</div>
+          <div class="bni"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="15" height="15"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg>Documentos</div>
+          <div class="bni on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="15" height="15"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Concorrentes</div>
+          <div class="bni"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="15" height="15"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Pós-contrato</div>
+        </div>
+        <div class="bmain">
+          <!-- Busca por CNPJ -->
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px">
+            <div style="flex:1;background:#1A1E30;border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:9px 14px;display:flex;align-items:center;gap:8px">
+              <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="2" stroke-linecap="round" width="14" height="14"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+              <span style="font-size:11px;color:rgba(255,255,255,.22)">Buscar por CNPJ, razão social, nicho...</span>
+            </div>
+            <div style="background:linear-gradient(135deg,#1A56FF,#7A2CFF);border-radius:8px;padding:9px 16px;font-size:11px;font-weight:700;color:#fff;cursor:pointer;white-space:nowrap">Analisar</div>
+          </div>
+          <!-- Empresa analisada -->
+          <div style="background:#1A1E30;border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:16px;margin-bottom:14px">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+              <div>
+                <div style="font-size:13px;font-weight:700;color:#fff">Distribuidora Alfa Ltda</div>
+                <div style="font-size:11px;color:rgba(255,255,255,.35);margin-top:2px">CNPJ 12.345.678/0001-90 · Materiais de construção · MT</div>
+              </div>
+              <div style="background:rgba(220,38,38,.12);border:1px solid rgba(220,38,38,.25);border-radius:6px;padding:4px 10px;font-size:10px;font-weight:700;color:#F87171">Concorrente direto</div>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
+              <div style="background:#13162A;border-radius:8px;padding:10px;text-align:center">
+                <div style="font-size:9px;color:rgba(255,255,255,.32);text-transform:uppercase;letter-spacing:.05em;font-weight:700">Participou</div>
+                <div style="font-size:22px;font-weight:900;color:#fff;margin-top:3px">247</div>
+                <div style="font-size:9px;color:rgba(255,255,255,.28)">últimos 24 meses</div>
+              </div>
+              <div style="background:#13162A;border-radius:8px;padding:10px;text-align:center">
+                <div style="font-size:9px;color:rgba(255,255,255,.32);text-transform:uppercase;letter-spacing:.05em;font-weight:700">Ganhou</div>
+                <div style="font-size:22px;font-weight:900;color:#4ADE80;margin-top:3px">89</div>
+                <div style="font-size:9px;color:rgba(255,255,255,.28)">36% de êxito</div>
+              </div>
+              <div style="background:#13162A;border-radius:8px;padding:10px;text-align:center">
+                <div style="font-size:9px;color:rgba(255,255,255,.32);text-transform:uppercase;letter-spacing:.05em;font-weight:700">Inabilitado</div>
+                <div style="font-size:22px;font-weight:900;color:#F87171;margin-top:3px">34</div>
+                <div style="font-size:9px;color:rgba(255,255,255,.28)">14% das disputas</div>
+              </div>
+              <div style="background:#13162A;border-radius:8px;padding:10px;text-align:center">
+                <div style="font-size:9px;color:rgba(255,255,255,.32);text-transform:uppercase;letter-spacing:.05em;font-weight:700">Ticket médio</div>
+                <div style="font-size:22px;font-weight:900;color:#00C7FF;margin-top:3px">R$84k</div>
+                <div style="font-size:9px;color:rgba(255,255,255,.28)">por licitação ganha</div>
+              </div>
+            </div>
+          </div>
+          <!-- Motivos de inabilitação -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+            <div style="background:#1A1E30;border-radius:10px;padding:14px">
+              <div style="font-size:11px;font-weight:700;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px">Motivos de inabilitação</div>
+              <div style="display:flex;flex-direction:column;gap:7px">
+                <div style="display:flex;justify-content:space-between;align-items:center">
+                  <span style="font-size:12px;color:rgba(255,255,255,.7)">Certidão vencida</span>
+                  <span style="font-size:11px;font-weight:700;color:#F87171">41%</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center">
+                  <span style="font-size:12px;color:rgba(255,255,255,.7)">Proposta fora do padrão</span>
+                  <span style="font-size:11px;font-weight:700;color:#F87171">29%</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center">
+                  <span style="font-size:12px;color:rgba(255,255,255,.7)">Preço inexequível</span>
+                  <span style="font-size:11px;font-weight:700;color:#FBBF24">18%</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center">
+                  <span style="font-size:12px;color:rgba(255,255,255,.7)">Outros</span>
+                  <span style="font-size:11px;font-weight:700;color:rgba(255,255,255,.4)">12%</span>
+                </div>
+              </div>
+            </div>
+            <div style="background:#1A1E30;border-radius:10px;padding:14px">
+              <div style="font-size:11px;font-weight:700;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px">Padrão de preços</div>
+              <div style="display:flex;flex-direction:column;gap:7px">
+                <div><div style="font-size:10px;color:rgba(255,255,255,.4);margin-bottom:3px">Cimento CP-II (saco 50kg)</div><div style="display:flex;align-items:center;gap:8px"><div style="flex:1;height:6px;background:rgba(255,255,255,.08);border-radius:3px"><div style="width:72%;height:100%;background:linear-gradient(90deg,#1A56FF,#7A2CFF);border-radius:3px"></div></div><span style="font-size:11px;font-weight:700;color:#fff">R$29,80</span></div></div>
+                <div><div style="font-size:10px;color:rgba(255,255,255,.4);margin-bottom:3px">Areia lavada (m³)</div><div style="display:flex;align-items:center;gap:8px"><div style="flex:1;height:6px;background:rgba(255,255,255,.08);border-radius:3px"><div style="width:58%;height:100%;background:linear-gradient(90deg,#1A56FF,#7A2CFF);border-radius:3px"></div></div><span style="font-size:11px;font-weight:700;color:#fff">R$91,00</span></div></div>
+                <div><div style="font-size:10px;color:rgba(255,255,255,.4);margin-bottom:3px">Tijolo cerâmico (mil)</div><div style="display:flex;align-items:center;gap:8px"><div style="flex:1;height:6px;background:rgba(255,255,255,.08);border-radius:3px"><div style="width:85%;height:100%;background:linear-gradient(90deg,#00C7FF,#1A56FF);border-radius:3px"></div></div><span style="font-size:11px;font-weight:700;color:#fff">R$590,00</span></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PÓS-CONTRATO / ATA -->
+  <div id="p-ata" class="panel">
+    <div class="brow" style="max-width:900px;width:100%">
+      <div class="bbar"><div class="bd r"></div><div class="bd y"></div><div class="bd g"></div><div class="burl">app.arkanjia.com.br/pos-contrato</div></div>
+      <div class="blay" style="grid-template-columns:190px 1fr;min-height:460px">
+        <div class="bsb">
+          <div class="bsb-top"><img src="https://raw.githubusercontent.com/ueligtoncordeiro-ux/arklicita/main/assets/symbol.png" alt="" style="height:22px;width:auto;object-fit:contain"><img src="https://raw.githubusercontent.com/ueligtoncordeiro-ux/arklicita/main/assets/wordmark.png" alt="Arkanjia" style="height:14px;width:auto;object-fit:contain"></div>
+          <div class="bni"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="15" height="15"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>Pipeline</div>
+          <div class="bni"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="15" height="15"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>Radar</div>
+          <div class="bni"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="15" height="15"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Composição</div>
+          <div class="bni"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="15" height="15"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg>Documentos</div>
+          <div class="bni"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="15" height="15"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Concorrentes</div>
+          <div class="bni on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="15" height="15"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Pós-contrato</div>
+        </div>
+        <div class="bmain">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
+            <span style="font-size:13px;font-weight:700;color:#fff">Gestão pós-contrato</span>
+            <div style="display:flex;gap:8px">
+              <span style="font-size:10px;background:rgba(0,180,100,.12);color:#4ADE80;padding:3px 9px;border-radius:8px;font-weight:600">3 ATAs ativas</span>
+              <span style="font-size:10px;background:rgba(220,38,38,.12);color:#F87171;padding:3px 9px;border-radius:8px;font-weight:600">1 vencendo em 30 dias</span>
+            </div>
+          </div>
+          <!-- ATAs -->
+          <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:14px">
+            <div style="background:#1A1E30;border:1px solid rgba(0,180,100,.2);border-radius:10px;padding:14px">
+              <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:10px">
+                <div>
+                  <div style="font-size:13px;font-weight:700;color:#fff">ATA 041/2026 — Prefeitura Cuiabá</div>
+                  <div style="font-size:11px;color:rgba(255,255,255,.38);margin-top:2px">Materiais de construção · Vigência: Jan–Dez 2026</div>
+                </div>
+                <div style="text-align:right">
+                  <div style="font-size:16px;font-weight:800;color:#4ADE80">R$284.000</div>
+                  <div style="font-size:10px;color:rgba(255,255,255,.35)">valor registrado</div>
+                </div>
+              </div>
+              <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px">
+                <div style="background:#13162A;border-radius:7px;padding:8px;text-align:center">
+                  <div style="font-size:9px;color:rgba(255,255,255,.32);text-transform:uppercase;font-weight:700">Saldo</div>
+                  <div style="font-size:14px;font-weight:800;color:#fff;margin-top:2px">R$196k</div>
+                </div>
+                <div style="background:#13162A;border-radius:7px;padding:8px;text-align:center">
+                  <div style="font-size:9px;color:rgba(255,255,255,.32);text-transform:uppercase;font-weight:700">Empenhos</div>
+                  <div style="font-size:14px;font-weight:800;color:#00C7FF;margin-top:2px">3</div>
+                </div>
+                <div style="background:#13162A;border-radius:7px;padding:8px;text-align:center">
+                  <div style="font-size:9px;color:rgba(255,255,255,.32);text-transform:uppercase;font-weight:700">Entregas</div>
+                  <div style="font-size:14px;font-weight:800;color:#4ADE80;margin-top:2px">2/3</div>
+                </div>
+                <div style="background:#13162A;border-radius:7px;padding:8px;text-align:center">
+                  <div style="font-size:9px;color:rgba(255,255,255,.32);text-transform:uppercase;font-weight:700">Dias rest.</div>
+                  <div style="font-size:14px;font-weight:800;color:#FBBF24;margin-top:2px">203</div>
+                </div>
+              </div>
+            </div>
+            <div style="background:#1A1E30;border:1px solid rgba(220,38,38,.2);border-radius:10px;padding:14px">
+              <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:8px">
+                <div>
+                  <div style="font-size:13px;font-weight:700;color:#fff">ATA 019/2026 — UFMT</div>
+                  <div style="font-size:11px;color:rgba(255,255,255,.38);margin-top:2px">Insumos laboratoriais · Vigência: Fev–Ago 2026</div>
+                </div>
+                <div style="background:rgba(220,38,38,.12);border:1px solid rgba(220,38,38,.3);border-radius:6px;padding:3px 9px;font-size:10px;font-weight:700;color:#F87171">⚠ Vence em 28 dias</div>
+              </div>
+              <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px">
+                <div style="background:#13162A;border-radius:7px;padding:8px;text-align:center"><div style="font-size:9px;color:rgba(255,255,255,.32);text-transform:uppercase;font-weight:700">Saldo</div><div style="font-size:14px;font-weight:800;color:#fff;margin-top:2px">R$41k</div></div>
+                <div style="background:#13162A;border-radius:7px;padding:8px;text-align:center"><div style="font-size:9px;color:rgba(255,255,255,.32);text-transform:uppercase;font-weight:700">Empenhos</div><div style="font-size:14px;font-weight:800;color:#00C7FF;margin-top:2px">5</div></div>
+                <div style="background:#13162A;border-radius:7px;padding:8px;text-align:center"><div style="font-size:9px;color:rgba(255,255,255,.32);text-transform:uppercase;font-weight:700">Entregas</div><div style="font-size:14px;font-weight:800;color:#FBBF24;margin-top:2px">4/5</div></div>
+                <div style="background:#13162A;border-radius:7px;padding:8px;text-align:center"><div style="font-size:9px;color:rgba(255,255,255,.32);text-transform:uppercase;font-weight:700">Dias rest.</div><div style="font-size:14px;font-weight:800;color:#F87171;margin-top:2px">28</div></div>
+              </div>
+            </div>
+          </div>
+          <!-- Próximas entregas -->
+          <div style="background:#1A1E30;border-radius:10px;padding:14px">
+            <div style="font-size:11px;font-weight:700;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px">Próximas entregas</div>
+            <div style="display:flex;flex-direction:column;gap:7px">
+              <div style="display:flex;align-items:center;justify-content:space-between;padding:8px;background:#13162A;border-radius:7px">
+                <div style="display:flex;align-items:center;gap:8px"><div style="width:8px;height:8px;border-radius:50%;background:#FBBF24;flex-shrink:0"></div><span style="font-size:12px;color:rgba(255,255,255,.7)">Cimento CP-II · 200 sacos · UFMT</span></div>
+                <span style="font-size:11px;font-weight:700;color:#FBBF24">15 Jun</span>
+              </div>
+              <div style="display:flex;align-items:center;justify-content:space-between;padding:8px;background:#13162A;border-radius:7px">
+                <div style="display:flex;align-items:center;gap:8px"><div style="width:8px;height:8px;border-radius:50%;background:#4ADE80;flex-shrink:0"></div><span style="font-size:12px;color:rgba(255,255,255,.7)">Areia lavada · 40m³ · Cuiabá</span></div>
+                <span style="font-size:11px;font-weight:700;color:#4ADE80">22 Jun</span>
+              </div>
+              <div style="display:flex;align-items:center;justify-content:space-between;padding:8px;background:#13162A;border-radius:7px">
+                <div style="display:flex;align-items:center;gap:8px"><div style="width:8px;height:8px;border-radius:50%;background:#00C7FF;flex-shrink:0"></div><span style="font-size:12px;color:rgba(255,255,255,.7)">Tijolo cerâmico · 5mil · Tangará</span></div>
+                <span style="font-size:11px;font-weight:700;color:#00C7FF">30 Jun</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </section>
 
 <!-- MERCADO -->
@@ -527,7 +840,7 @@ footer p{font-size:12px;color:rgba(255,255,255,.26)}
   <div class="ey rev">Posicionamento competitivo</div>
   <h2 class="sh rev">O Siga Pregão para quando você ganha.<br>A Arkanjia continua até o recebimento.</h2>
   <div class="comp-hero rev">
-    <div class="chtag">Análise direta — Junho 2025</div>
+    <div class="chtag">Análise direta — Junho 2026</div>
     <div class="chtxt">O principal concorrente (Siga Pregão, 10 anos, +2.700 clientes) tem busca multi-portal, robô de lances e análise de concorrentes. <span>Não tem SINAPI integrada, não gera documentos, não gerencia pós-contrato.</span> Esses três gaps são o produto da Arkanjia.</div>
   </div>
   <table class="ctable rev">
@@ -649,10 +962,20 @@ footer p{font-size:12px;color:rgba(255,255,255,.26)}
     <img src="https://raw.githubusercontent.com/ueligtoncordeiro-ux/arklicita/main/assets/wordmark.png" alt="Arkanjia" style="height:18px;width:auto;object-fit:contain">
   </div>
   <p>Tecnologia · Inovação · Futuro &nbsp;·&nbsp; Tangará da Serra, MT</p>
-  <p>Documento confidencial · Uso restrito a investidores · 2025</p>
+  <p>Documento confidencial · Uso restrito a investidores · 2026</p>
 </footer>
 
 <script>
+// Phone slideshow
+let currentSlide = 0;
+const totalSlides = 4;
+function goSlide(n) {
+  document.querySelectorAll('.hp-slide').forEach((s,i) => s.classList.toggle('active', i===n));
+  document.querySelectorAll('.hp-dot-ind').forEach((d,i) => d.classList.toggle('active', i===n));
+  currentSlide = n;
+}
+setInterval(() => { goSlide((currentSlide+1) % totalSlides); }, 3000);
+
 function sw(id,btn){
   document.querySelectorAll('.panel').forEach(p=>p.classList.remove('on'));
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));
